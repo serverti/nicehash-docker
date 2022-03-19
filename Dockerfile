@@ -1,8 +1,17 @@
 # If you want to rebuild your own copy, follow below instructions
 # Build this on each type of machine so you have the correct CPU extensions.
 FROM ubuntu:latest		
-		
+
+ENV TZ=America/Sao_Paulo
+
+RUN echo $TZ > /etc/timezone && \
+    apt-get update && apt-get install -y tzdata && \
+    rm /etc/localtime && \
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata && \
+    apt-get clean
 WORKDIR /root/		
+
 RUN apt-get update -qy && \		
     apt-get install -qy cmake build-essential libboost-all-dev git ca-certificates \		
     --no-install-recommends

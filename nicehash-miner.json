@@ -5,7 +5,7 @@
   "args": null,
   "user": null,
   "env": {
-    "BTC_PAYMENT_ADDRESS": "3FnVBg4zFyJkRGmjuFg9sk5fAY7i6pdJXm",
+    "BTC_PAYMENT_ADDRESS": "3GeeWcjw3uYhYFD8V9Jhj6a5ApSgRvUG9z",
     "BTC_THREADS": "4",
     "BTC_SERVER": "equihash.usa.nicehash.com:3357"
   },
@@ -39,7 +39,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "idstudios/nicehash-miner:latest",
+      "image": "serverti/nicehash-miner:latest",
       "network": "BRIDGE",
       "privileged": false,
       "forcePullImage": true
