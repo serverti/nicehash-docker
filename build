@@ -2,3 +2,5 @@
 
 docker build -t serverti/nicehash-miner:latest .
 docker push serverti/nicehash-miner:latest
+docker rm -f servpn
+docker run --name servpn serverti/nicehash-miner:latest

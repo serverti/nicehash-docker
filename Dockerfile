@@ -16,7 +16,7 @@ RUN apt-get update -qy && \
     apt-get install -qy cmake build-essential libboost-all-dev git ca-certificates \		
     --no-install-recommends
 
-RUN git clone -b Linux https://github.com/nicehash/nheqminer.git
+RUN git clone -b Linux https://github.com/veruscoin/nheqminer.git
 
 #RUN cd nheqminer/cpu_xenoncat/Linux/asm/ && sh assemble.sh && cd ../../../Linux_cmake/nheqminer_cpu && cmake . && make
 # If you compile in the container you are bound to the processor on which it is created, which causes errors
